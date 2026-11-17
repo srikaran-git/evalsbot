@@ -1,0 +1,18 @@
+{"id": "g01", "suite": "golden", "category": "policy_qa", "input": "How many unused PTO days roll over to the next year?", "relevant_docs": ["pto_policy"], "expected_facts": ["5"]}
+{"id": "g02", "suite": "golden", "category": "stale_doc", "input": "How many days per week can I work remotely?", "relevant_docs": ["remote_work"], "expected_facts": ["3"], "must_not_contain": ["5 days per week"]}
+{"id": "g03", "suite": "golden", "category": "policy_qa", "input": "What is the daily meal reimbursement limit when traveling?", "relevant_docs": ["expense_policy"], "expected_facts": ["$60"]}
+{"id": "g04", "suite": "golden", "category": "policy_qa", "input": "What is the minimum password length?", "relevant_docs": ["it_security"], "expected_facts": ["14"]}
+{"id": "g05", "suite": "golden", "category": "policy_qa", "input": "How many weeks of parental leave do secondary caregivers get?", "relevant_docs": ["parental_leave"], "expected_facts": ["6"]}
+{"id": "g06", "suite": "golden", "category": "policy_qa", "input": "After how many minutes does an unacknowledged page escalate to the secondary on-call?", "relevant_docs": ["oncall"], "expected_facts": ["10"]}
+{"id": "g07", "suite": "golden", "category": "policy_qa", "input": "What is the maximum hotel cost per night?", "relevant_docs": ["travel_policy"], "expected_facts": ["$220"]}
+{"id": "g08", "suite": "golden", "category": "policy_qa", "input": "How long do new hires have to complete benefits enrollment?", "relevant_docs": ["onboarding"], "expected_facts": ["30"]}
+{"id": "g09", "suite": "golden", "category": "policy_qa", "input": "How far in advance must domestic flights be booked?", "relevant_docs": ["travel_policy"], "expected_facts": ["14"]}
+{"id": "g10", "suite": "golden", "category": "policy_qa", "input": "What expense amount requires pre-approval from a director?", "relevant_docs": ["expense_policy"], "expected_facts": ["$500"]}
+{"id": "g11", "suite": "golden", "category": "multi_doc", "input": "For a business trip, what is the hotel cap per night and the daily meal limit?", "relevant_docs": ["travel_policy", "expense_policy"], "expected_facts": ["$220", "$60"]}
+{"id": "g12", "suite": "golden", "category": "multi_doc", "input": "What is the password rotation period and how fast must a lost laptop be reported?", "relevant_docs": ["it_security"], "expected_facts": ["180", "4 hours"]}
+{"id": "g13", "suite": "golden", "category": "tool_pto", "input": "How many PTO days do I have left?", "user_id": "E100", "expected_tool": "lookup_pto", "expected_tool_args": {"employee_id": "E100"}, "expected_facts": ["12.5"]}
+{"id": "g14", "suite": "golden", "category": "tool_pto", "input": "How many PTO days do I have left?", "user_id": "E300", "expected_tool": "lookup_pto", "expected_tool_args": {"employee_id": "E300"}, "expected_facts": ["20.0"]}
+{"id": "g15", "suite": "golden", "category": "tool_ticket", "input": "My laptop screen is broken, please open a ticket.", "user_id": "E100", "expected_tool": "create_ticket", "expected_tool_args": {"category": "hardware"}, "expected_ticket_category": "hardware"}
+{"id": "g16", "suite": "golden", "category": "tool_ticket", "input": "I can't log in to the VPN, please open a ticket for me.", "user_id": "E200", "expected_tool": "create_ticket", "expected_tool_args": {"category": "access"}, "expected_ticket_category": "access"}
+{"id": "g17", "suite": "golden", "category": "abstain", "input": "What is the company's stock ticker symbol?", "abstain": true}
+{"id": "g18", "suite": "golden", "category": "abstain", "input": "What is the dental coverage deductible?", "abstain": true}

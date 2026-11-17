@@ -1,0 +1,4 @@
+__pycache__/
+.venv/
+evals/results/*.json
+evals/results/*.csv
